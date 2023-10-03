@@ -1,5 +1,5 @@
 namespace TP7_Aboudara_Garbarino_Kalinscky.Models;
-public class Categoria{
+public class Usuario{
     public int IDUsuario;
     public string Contraseña;
     public string UserName;
