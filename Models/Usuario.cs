@@ -5,5 +5,5 @@ public class Usuario{
     public string UserName;
     public string? Nombre;
     public string? Email;
-    public string? telefono; 
+    public string? Telefono; 
 }
