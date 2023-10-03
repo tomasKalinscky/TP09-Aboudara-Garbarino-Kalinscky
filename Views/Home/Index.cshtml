@@ -24,10 +24,10 @@
 				</div>
 				<div class="hr"></div>
 				<div class="foot-lnk">
-					<a href="#forgot">¿Te olvidaste la contraseña?</a>
+					<a href='@Url.Action("Olvide")'>¿Te olvidaste la contraseña?</a>
 				</div>
 			</div>
-			<div class="sign-up-htm">
+			<form Action='Url.Action(Index)' class="sign-up-htm">
 				<div class="group">
 					<label for="user" class="label">Nombre de usuario</label>
 					<input id="user" type="text" class="input">
@@ -41,21 +41,21 @@
 					<input id="pass" type="password" class="input" data-type="password">
 				</div>
 				<div class="group">
-					<label for="pass" class="label">Email (Opcional)</label>
-					<input id="pass" type="text" class="input">
+					<label for="email" class="label">Email (Opcional)</label>
+					<input id="email" type="text" class="input">
 				</div>
                 <div class="group">
-					<label for="pass" class="label">Nombre (Opcional)</label>
-					<input id="pass" type="text" class="input">
+					<label for="name" class="label">Nombre (Opcional)</label>
+					<input id="name" type="text" class="input">
 				</div>
                 <div class="group">
-					<label for="pass" class="label">Telefono (Opcional)</label>
-					<input id="pass" type="text" class="input">
+					<label for="telefono" class="label">Telefono (Opcional)</label>
+					<input id="telefono" type="text" class="input">
 				</div>
 				<div class="group">
 					<input type="submit" class="button" value="Sign Up">
 				</div>
-			</div>
+			</form>
 		</div>
 	</div>
 </div>
