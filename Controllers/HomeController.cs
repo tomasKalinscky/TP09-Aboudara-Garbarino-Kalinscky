@@ -23,6 +23,7 @@ public class HomeController : Controller
     }
 
     public IActionResult Bienvenida(){
+        
         return View();
     }
 
