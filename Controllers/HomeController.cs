@@ -22,6 +22,9 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult registro() {
+        
+    }
     public IActionResult Bienvenida(){
         
         return View();
