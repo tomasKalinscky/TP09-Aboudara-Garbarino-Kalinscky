@@ -25,9 +25,12 @@ public static class BD
             string sql = "SELECT * FROM usuario where username = @pusername AND contraseña = @pcontraseña";
             broder = db.QueryFirstOrDefault<Usuario>(sql, new {pusername = usuario, pcontraseña = contraseña});
         }
-        return broder.UserName == null || broder.UserName == "";
+        if (broder != null && !string.IsNullOrEmpty(broder.UserName)) {
+        return true; 
+    } else {
+        return false; 
     }
-
+    }
     public static bool RecuperarContraseña(string usuario, string contraseña){
         int n;
         using (SqlConnection db = new SqlConnection(_connectionString)){

@@ -13,8 +13,9 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public IActionResult Index(bool user=true)
     {
+        ViewBag.usuarioEstaMal = user;
         return View();
     }
     

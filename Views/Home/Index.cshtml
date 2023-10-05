@@ -6,8 +6,13 @@
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Iniciar sesion</label>
 		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Registrarse</label>
 		<div class="login-form">
-			<form Action='@Url.Action("login","account")' class="sign-in-htm">
-				
+			<form Action='@Url.Action("login","account")' class="sign-in-htm" method="post">
+				@if (ViewBag.usuarioEstaMal != null && ViewBag.usuarioEstaMal == true) {
+        			<script>
+						mostrarMensajeDeError();
+					</script>
+				}
+
 				<div class="group">
 					<label for="user" class="label">Usuario</label>
 					<input id="user" name="usuario" type="text" class="input">

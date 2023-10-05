@@ -33,6 +33,7 @@ $('.login').on('submit', function(e) {
 });
 
 function mostrarMensajeDeError() {
+  alert("entre");
   var mensajeAnterior = document.querySelector(".mensaje-error");
   if (mensajeAnterior) {
       mensajeAnterior.remove();

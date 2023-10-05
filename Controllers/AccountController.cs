@@ -12,15 +12,18 @@ public class account : Controller
     }
 
     public IActionResult olvide(string usuario, string contraseña) {
-        BD.RecuperarContraseña(contraseña);
+        BD.RecuperarContraseña(usuario, contraseña);
         return View("Index");
     }
 
-    public IActionResult login(string usuario, string contraseña) {
-        if (BD.Login(usuario, contraseña)) {
-            ViewBag.usuario = usuario;
-            return View("bienvenida");
-        }
-        return View("Index");
+    [HttpPost]
+  public IActionResult login(string usuario, string contraseña) {
+    if (BD.Login(usuario, contraseña)) {
+        ViewBag.usuario = usuario;
+        return View("bienvenida");
     }
+
+    return RedirectToAction("Index", "Home", new {user = false});
+}
+
 }
