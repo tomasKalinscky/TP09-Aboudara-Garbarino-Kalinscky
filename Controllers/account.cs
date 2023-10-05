@@ -5,8 +5,9 @@ public class account : Controller
 {
     private readonly ILogger<account> _logger;
     
-    public IActionResult registro() {
-        
+    public IActionResult registro(string usuario, string contraseña, string email, string nombre, string telefono) {
+        Usuario nuevoUsuario = Usuario.Usuario(usuario, contraseña, email, nombre, telefono);
+        BD.RegistrarUsuario(nuevoUsuario);
         return View("Index");
     }
 

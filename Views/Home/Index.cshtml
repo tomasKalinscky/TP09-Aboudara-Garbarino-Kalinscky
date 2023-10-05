@@ -31,15 +31,15 @@
 			<form Action='@Url.Action("registro")' class="sign-up-htm">
 				<div class="group">
 					<label for="user" class="label">Nombre de usuario</label>
-					<input id="user" type="text" class="input">
+					<input id="user" name="usuario" type="text" class="input">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">contraseña</label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<input id="pass" name="contraseña" type="password" class="input" data-type="password">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Repite la contraseña</label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<input id="pass" name="repecontra" type="password" class="input" data-type="password">
 				</div>
 				<div class="group">
 					<label for="email" class="label">Email (Opcional)</label>
@@ -47,11 +47,11 @@
 				</div>
                 <div class="group">
 					<label for="name" class="label">Nombre (Opcional)</label>
-					<input id="name" type="text" class="input">
+					<input id="name" name="nombre" type="text" class="input">
 				</div>
                 <div class="group">
 					<label for="telefono" class="label">Telefono (Opcional)</label>
-					<input id="telefono" type="text" class="input">
+					<input id="telefono" name="telefono" type="text" class="input">
 				</div>
 				<div class="group">
 					<input type="submit" class="button" value="Registrarte">

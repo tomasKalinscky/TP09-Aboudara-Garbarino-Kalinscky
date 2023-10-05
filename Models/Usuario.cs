@@ -7,3 +7,11 @@ public class Usuario{
     public string? Email;
     public string? Telefono; 
 }
+
+public Usuario(string UserName = "", string Contraseña = "", Nombre = "", Email = "", Telefono = "") {
+    this.UserName = UserName;
+    this.Contraseña = Contraseña;
+    this.Nombre = Nombre;
+    this.Email = Email; 
+    this.Telefono = Telefono;
+}
