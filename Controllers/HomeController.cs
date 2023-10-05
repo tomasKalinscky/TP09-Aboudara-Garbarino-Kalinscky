@@ -17,14 +17,12 @@ public class HomeController : Controller
     {
         return View();
     }
+    
 
     public IActionResult Olvide(){
         return View();
     }
 
-    public IActionResult registro() {
-        
-    }
     public IActionResult Bienvenida(){
         return View();
     }
