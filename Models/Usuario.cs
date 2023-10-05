@@ -1,6 +1,5 @@
 namespace TP09_Aboudara_Garbarino_Kalinscky.Models;
 public class Usuario{
-    public int IDUsuario;
     public string Contraseña;
     public string UserName;
     public string? Nombre;

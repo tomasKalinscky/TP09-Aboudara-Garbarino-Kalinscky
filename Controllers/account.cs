@@ -11,8 +11,9 @@ public class account : Controller
         return View("Index");
     }
 
-    public IActionResult olvide() {
-        return View("olvide");
+    public IActionResult olvide(string usuario, string contraseña) {
+        BD.RecuperarContraseña(contraseña);
+        return View("Index");
     }
 
     public IActionResult login(string usuario, string contraseña) {
