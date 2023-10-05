@@ -5,7 +5,9 @@ public class account : Controller
 {
     private readonly ILogger<account> _logger;
     
-    public IActionResult registro() {
+    public IActionResult registro(string usuario, string contraseña, string email, string nombre, string telefono) {
+        Usuario nuevoUsuario = Usuario.Usuario(usuario, contraseña, email, nombre, telefono);
+        BD.RegistrarUsuario(nuevoUsuario);
         return View("Index");
     }
 
@@ -13,7 +15,11 @@ public class account : Controller
         return View("olvide");
     }
 
-    public IActionResult login() {
+    public IActionResult login(string usuario, string contraseña) {
+        if (BD.Login(usuario, contraseña)) {
+            ViewBag.usuario = usuario;
+            return View("bienvenida");
+        }
         return View("Index");
     }
 }
