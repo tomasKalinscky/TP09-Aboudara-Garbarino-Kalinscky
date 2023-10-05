@@ -1,7 +1,7 @@
 <div class="login-wrap" style="margin-top: 10%">
 	<div class="login-html">
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Recuperar contraseña</label>
-		<div class="login-form">
+		<form Action='@Url.Action("olvide","account")' class="login-form">
 			<div class="group">
 				<label for="email" class="label">Ingrese el Email</label>
 				<input id="email" type="text" class="input">
@@ -14,6 +14,6 @@
 				<label for="email" class="label">Repita la nueva contraseña</label>
 				<input id="email" type="text" class="input">
 			</div>
-		</div>
+		</form>
 	</div>
 </div>
