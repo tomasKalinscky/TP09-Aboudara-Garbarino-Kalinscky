@@ -1,18 +1,25 @@
-namespace TP09_Aboudara_Garbarino_Kalinscky.Models;
-public class Usuario{
-    public string Contraseña;
-    public string UserName;
-    public string? Nombre;
-    public string? Email;
-    public string? Telefono; 
+namespace TP09_Aboudara_Garbarino_Kalinscky.Models
+{
+    public class Usuario
+    {
+        public string Contraseña { get; set; }
+        public string UserName { get; set; }
+        public string Nombre { get; set; }
+        public string Email { get; set; }
+        public string Telefono { get; set; }
 
-    public Usuario(string UserName = "",string Contraseña = "",string Nombre = "", string Email = "",string Telefono = "0") {
-    this.UserName = UserName;
-    this.Contraseña = Contraseña;
-    this.Nombre = Nombre;
-    this.Email = Email; 
-    this.Telefono = Telefono;
+        public Usuario(){
+
+        }
+        public Usuario(string userName = "", string contraseña = "", string nombre = "", string email = "", string telefono = "0")
+        {
+            this.UserName = userName;
+            this.Contraseña = contraseña;
+            this.Nombre = nombre;
+            this.Email = email;
+            this.Telefono = telefono;
+        }
+    }
 }
 
-}
 

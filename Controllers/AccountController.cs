@@ -1,9 +1,9 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using TP09_Aboudara_Garbarino_Kalinscky.Models;
-public class account : Controller
+public class AccountController : Controller
 {
-    private readonly ILogger<account> _logger;
+    private readonly ILogger<AccountController> _logger;
     
     public IActionResult registro(string usuario, string contraseña, string email, string nombre, string telefono) {
         Usuario nuevoUsuario = new Usuario(usuario, contraseña, email, nombre, telefono);
@@ -20,7 +20,7 @@ public class account : Controller
   public IActionResult login(string usuario, string contraseña) {
     if (BD.Login(usuario, contraseña)) {
         ViewBag.usuario = usuario;
-        return View("bienvenida");
+        return  RedirectToAction("Bienvenida", "Home");
     }
 
     return RedirectToAction("Index", "Home", new {user = true});

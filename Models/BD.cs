@@ -19,11 +19,11 @@ public static class BD
         return n != 0;
     }
 
-    public static bool Login(string usuario, string contraseña){
+    public static bool Login(string username, string contraseña){
         Usuario broder;
         using (SqlConnection db = new SqlConnection(_connectionString)){
             string sql = "SELECT * FROM usuario where username = @pusername AND contraseña = @pcontraseña";
-            broder = db.QueryFirstOrDefault<Usuario>(sql, new {pusername = usuario, pcontraseña = contraseña});
+            broder = db.QueryFirstOrDefault<Usuario>(sql, new {pusername = username, pcontraseña = contraseña});
         }
         if (broder != null && !string.IsNullOrEmpty(broder.UserName)) {
         return true; 
