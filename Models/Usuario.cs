@@ -6,7 +6,7 @@ public class Usuario{
     public string? Email;
     public string? Telefono; 
 
-    public Usuario(string UserName = "",string Contraseña = "",string Nombre = "", string Email = "",string Telefono = "0") {
+    public Usuario(string UserName = "",string Contraseña = "", string Email = "",string Telefono = "0", string Nombre = "") {
     this.UserName = UserName;
     this.Contraseña = Contraseña;
     this.Nombre = Nombre;
