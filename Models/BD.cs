@@ -34,7 +34,7 @@ public static class BD
     public static bool RecuperarContraseña(string usuario, string contraseña){
         int n;
         using (SqlConnection db = new SqlConnection(_connectionString)){
-            string sql = "UPDATE usuario SET contraseña = @pcontraseña WHERE usuario = @pusuario";
+            string sql = "UPDATE usuario SET contraseña = @pcontraseña WHERE username = @pusuario";
             n = db.Execute(sql, new {pcontraseña = contraseña, pusuario = usuario});
         }
         return n != 0;

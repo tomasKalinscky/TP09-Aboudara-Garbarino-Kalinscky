@@ -13,7 +13,7 @@ public class AccountController : Controller
 
     public IActionResult olvide(string usuario, string contraseña) {
         BD.RecuperarContraseña(usuario, contraseña);
-        return View("Index");
+        return RedirectToAction("Index", "Home");
     }
 
     [HttpPost]
