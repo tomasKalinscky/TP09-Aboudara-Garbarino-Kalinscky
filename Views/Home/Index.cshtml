@@ -7,10 +7,9 @@
 		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Registrarse</label>
 		<div class="login-form">
 			<form Action='@Url.Action("login","account")' class="sign-in-htm" method="post">
+
 				@if (ViewBag.usuarioEstaMal != null && ViewBag.usuarioEstaMal == true) {
-        			<script>
-						mostrarMensajeDeError();
-					</script>
+					<h2 class="mensaje-error">Contraseña o usuario incorrecto</h2>
 				}
 
 				<div class="group">

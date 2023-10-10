@@ -23,7 +23,7 @@ public class account : Controller
         return View("bienvenida");
     }
 
-    return RedirectToAction("Index", "Home", new {user = false});
+    return RedirectToAction("Index", "Home", new {user = true});
 }
 
 }

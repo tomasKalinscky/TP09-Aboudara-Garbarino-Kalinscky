@@ -31,17 +31,3 @@ $('.login').on('submit', function(e) {
     }, 4000);
   }, 3000);
 });
-
-function mostrarMensajeDeError() {
-  alert("entre");
-  var mensajeAnterior = document.querySelector(".mensaje-error");
-  if (mensajeAnterior) {
-      mensajeAnterior.remove();
-  }
-  var mensajeDeError = document.createElement("h2");
-  mensajeDeError.textContent = "Contraseña o usuario incorrecto";
-  mensajeDeError.classList.add("mensaje-error");
-
-  var primerGrupo = document.querySelector(".group");
-  primerGrupo.parentElement.insertBefore(mensajeDeError, primerGrupo);
-}
