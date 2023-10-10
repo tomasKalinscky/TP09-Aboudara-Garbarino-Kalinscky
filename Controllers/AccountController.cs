@@ -20,8 +20,7 @@ public class AccountController : Controller
     [HttpPost]
   public IActionResult login(string usuario, string contraseña) {
     if (BD.Login(usuario, contraseña)) {
-        ViewBag.usuario = usuario;
-        return  RedirectToAction("Bienvenida", "Home");
+        return  RedirectToAction("Bienvenida", "Home", new {pusuario = usuario});
     }
 
     return RedirectToAction("Index", "Home", new {user = true});

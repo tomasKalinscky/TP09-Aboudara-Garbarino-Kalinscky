@@ -24,8 +24,8 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Bienvenida(){
-        
+    public IActionResult Bienvenida(string pusuario){
+        ViewBag.usuario = pusuario;
         return View();
     }
 
